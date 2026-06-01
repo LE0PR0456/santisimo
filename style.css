@@ -1,0 +1,692 @@
+/* ==========================================================================
+   1. ESTILOS GENERALES Y CONFIGURACIÓN BASE
+   ========================================================================== */
+
+body {
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  font-family: "Comic Sans MS", "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Contenedores de Tarjetas Informativas y Juegos */
+.contenedor-juego,
+.informacion-patria,
+.info-himno-contenedor,
+.himno-seccion {
+  max-width: 750px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.contenedor-juego {
+  max-width: 650px;
+  min-height: 50vh; /* Empuja el footer hacia abajo */
+}
+
+h2 {
+  color: #1a56a6;
+  margin-top: 0;
+  text-align: center;
+}
+
+.instruccion {
+  font-size: 1.05rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Botón de Validación Universal */
+.btn-verificar {
+  display: block;
+  width: 100%;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 30px;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.2s,
+    transform 0.1s ease;
+}
+
+.btn-verificar:hover {
+  background-color: #218838;
+}
+
+.btn-verificar:active {
+  transform: scale(0.98);
+}
+
+/* Cajas de Alertas / Feedback */
+.feedback {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ==========================================================================
+   2. MENÚ DE NAVEGACIÓN (navbar.css)
+   ========================================================================== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a56a6;
+  padding: 12px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  font-family: "Comic Sans MS", "Segoe UI", sans-serif;
+  border-radius: 15px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.img-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.texto-colegio {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  text-align: left;
+}
+
+.nombre-ue {
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.subtitulo-ue {
+  font-size: 0.85rem;
+  color: #fbc02d;
+  margin-top: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 18px;
+  border-radius: 25px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.nav-links a.activo {
+  color: #222222;
+  background-color: #fbc02d;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links a.activo:hover {
+  background-color: #fdd835;
+  transform: none;
+}
+
+/* ==========================================================================
+   3. PÁGINA DE INICIO (style.css original)
+   ========================================================================== */
+
+.contenedor-inicio {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: "Comic Sans MS", "Segoe UI", sans-serif;
+  min-height: 70vh;
+}
+
+.hero-section {
+  background-color: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.titulo-principal {
+  color: #1a56a6;
+  font-size: 2.2rem;
+  margin-top: 0;
+}
+
+.introduccion {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #444;
+  max-width: 800px;
+  margin: 15px auto 30px auto;
+}
+
+.video-contenedor {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #eaeaea;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-contenedor iframe {
+  width: 100%;
+  height: 335px;
+  border-radius: 10px;
+  border: none;
+}
+
+.pie-video {
+  margin: 8px 0 0 0;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.tarjetas-seccion h2 {
+  text-align: center;
+  color: #1a56a6;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+.grid-tarjetas {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.tarjeta-inicio {
+  background: #ffffff;
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 20px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tarjeta-inicio:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(26, 86, 166, 0.2);
+}
+
+.tarjeta-imagen img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.tarjeta-inicio h3 {
+  color: #1a56a6;
+  margin: 15px 0 10px 0;
+  font-size: 1.3rem;
+  padding: 0 10px;
+}
+
+.tarjeta-inicio p {
+  font-size: 0.95rem;
+  color: #555;
+  padding: 0 15px;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.btn-ir {
+  display: inline-block;
+  background-color: #fbc02d;
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s;
+}
+
+.btn-ir:hover {
+  background-color: #f9a825;
+}
+
+/* ==========================================================================
+   4. SECCIÓN RESEÑA HISTÓRICA DE LOS SÍMBOLOS Y EL HIMNO (himno.css / bandera.css)
+   ========================================================================== */
+
+.informacion-patria h2 {
+  text-align: left;
+  border-bottom: 3px solid #fdd835;
+  padding-bottom: 10px;
+}
+
+.info-himno-contenedor h2 {
+  color: #0038a8;
+  text-align: left;
+}
+
+.informacion-patria h3,
+.info-himno-contenedor h3 {
+  color: #1e88e5;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.informacion-patria ul,
+.info-himno-contenedor ul {
+  padding-left: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.informacion-patria li {
+  margin-bottom: 8px;
+}
+
+.info-himno-contenedor hr {
+  border: 0;
+  height: 2px;
+  background: #fcd116;
+  margin: 20px 0;
+}
+
+/* Estructura de la letra y reproductor */
+.himno-seccion h2 {
+  color: #0038a8;
+  border-bottom: 4px solid #fcd116;
+  padding-bottom: 10px;
+  margin-top: 0;
+  text-align: left;
+}
+
+.himno-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.himno-letra h3,
+.himno-audio h3 {
+  color: #1e88e5;
+  margin-top: 0;
+}
+
+.himno-letra p {
+  line-height: 1.6;
+  color: #333;
+  background: #f7f9fa;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.himno-letra .coro {
+  border-left: 5px solid #fcd116;
+}
+
+.himno-letra .estrofa {
+  border-left: 5px solid #ce1126;
+}
+
+.btn-enlace-video {
+  display: inline-block;
+  background-color: #ce1126;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(206, 17, 38, 0.2);
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.btn-enlace-video:hover {
+  background-color: #b00f20;
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   5. JUEGO 1: ARRASTRAR LA BANDERA / ESCUDO (bandera.css / escudo.css)
+   ========================================================================== */
+
+.marco-bandera {
+  width: 100%;
+  height: 210px;
+  border: 3px dashed #1a56a6;
+  background-color: #f7f9fa;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.linea-guia {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 0.95rem;
+  border-bottom: 1px dashed #ddd;
+  transition: background-color 0.2s ease;
+}
+
+.linea-guia:last-child {
+  border-bottom: none;
+}
+
+.piezas-contenedor {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pieza {
+  width: 140px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  cursor: grab;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  font-size: 0.9rem;
+  text-align: center;
+  user-select: none;
+  transition: transform 0.15s ease;
+}
+
+.pieza:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+
+.pieza.amarillo {
+  background-color: #fdd835;
+  color: #222;
+}
+
+.pieza.azul {
+  background-color: #1e88e5;
+}
+
+.pieza.rojo {
+  background-color: #e53935;
+}
+
+/* ==========================================================================
+   6. JUEGO 2: CRUCIGRAMA DEL HIMNO (himno.css)
+   ========================================================================== */
+
+.pistas {
+  background-color: #eef3f9;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid #0038a8;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.pistas p {
+  margin: 5px 0;
+}
+
+.crucigrama {
+  display: grid;
+  grid-template-columns: repeat(4, 55px);
+  grid-gap: 8px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.celda {
+  width: 55px;
+  height: 55px;
+}
+
+.celda input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 2.5px solid #0038a8;
+  border-radius: 6px;
+  background-color: #ffffff;
+  font-family: sans-serif;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+.celda input:focus {
+  background-color: #fff59d;
+  outline: none;
+  border-color: #ce1126;
+}
+
+.celda input::placeholder {
+  font-size: 0.75rem;
+  color: #a0a0a0;
+}
+
+.celda.vacia {
+  border: none;
+  background: transparent;
+}
+
+/* ==========================================================================
+   7. PIE DE PÁGINA (footer.css)
+   ========================================================================== */
+
+.main-footer {
+  background-color: #222222;
+  color: #ffffff;
+  font-family: "Comic Sans MS", "Segoe UI", sans-serif;
+  margin-top: auto;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 40px;
+  gap: 30px;
+}
+
+.footer-info h3 {
+  color: #fbc02d;
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.año-escolar {
+  font-weight: bold;
+  color: #ffffff !important;
+}
+
+.footer-creditos h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  color: #1e88e5;
+}
+
+.footer-creditos p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.mencion {
+  font-style: italic;
+}
+
+.footer-barra-derechos {
+  text-align: center;
+  background-color: #111111;
+  padding: 15px;
+  font-size: 0.8rem;
+  color: #777777;
+  border-radius: 0;
+}
+
+/* ==========================================================================
+   8. RESPONSIVE DESIGN (MEDIA QUERIES INTEGRADOS)
+   ========================================================================== */
+
+/* Tablets y Pantallas Medianas (Hasta 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 0;
+  }
+
+  .nav-logo {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .texto-colegio {
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-links a {
+    padding: 8px 14px;
+    font-size: 0.95rem;
+  }
+
+  .video-contenedor iframe {
+    height: 250px;
+  }
+
+  .titulo-principal {
+    font-size: 1.8rem;
+  }
+}
+
+/* Teléfonos y Dispositivos Móviles Pequeños (Hasta 600px) */
+@media (max-width: 600px) {
+  .contenedor-juego,
+  .informacion-patria,
+  .info-himno-contenedor,
+  .himno-seccion {
+    padding: 20px;
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  /* Distribución vertical para audio y letra */
+  .himno-contenedor {
+    flex-direction: column;
+  }
+
+  /* Ajuste responsivo estricto para las celdas del Crucigrama */
+  .crucigrama {
+    grid-template-columns: repeat(4, 45px);
+    grid-gap: 6px;
+  }
+
+  .celda {
+    width: 45px;
+    height: 45px;
+  }
+
+  .celda input {
+    font-size: 1.1rem;
+  }
+
+  /* Ajuste de piezas arrastrables */
+  .pieza {
+    width: 110px;
+    height: 50px;
+    font-size: 0.8rem;
+  }
+
+  .marco-bandera {
+    height: 160px;
+  }
+
+  /* Footer en teléfonos */
+  .footer-contenido {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+}

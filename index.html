@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Los Símbolos Patrios Interactivos</title>
+    <link rel="icon" type="image/png" href="./img/logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Ajustes de navegación interna para evitar solapamientos con el menú fijo */
+      html {
+        scroll-behavior: smooth;
+      }
+      section[id],
+      main[id] {
+        scroll-margin-top: 90px;
+      }
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .imagen-guia-juego img {
+        display: block;
+        max-width: 200px;
+        margin: 15px auto;
+      }
+      .reto-escudo {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: left;
+      }
+      .pregunta-escudo input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 2px solid #1a56a6;
+        border-radius: 8px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ==========================================================================
+       1. MENÚ DE NAVEGACIÓN (Convertido a HTML puro con enlaces de anclaje)
+       ========================================================================== -->
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img src="./img/logo.png" alt="Logo Colegio" class="img-logo" />
+        <div class="texto-colegio">
+          <span class="nombre-ue">Unidad Educativa Colegio Del Santisimo</span>
+          <span class="subtitulo-ue">Proyecto Especial</span>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#inicio" id="link-inicio" class="activo">🏠 Inicio</a></li>
+        <li><a href="#bandera-seccion" id="link-bandera">🧩 Bandera</a></li>
+        <li><a href="#escudo-seccion" id="link-escudo">🛡️ Escudo</a></li>
+        <li><a href="#himno-seccion" id="link-himno">🎵 Himno</a></li>
+      </ul>
+    </nav>
+
+    <!-- ==========================================================================
+       2. SECCIÓN DE INICIO / BIENVENIDA (index.html)
+       ========================================================================== -->
+    <main class="contenedor-inicio" id="inicio">
+      <section class="hero-section">
+        <h1 class="titulo-principal">¡Bienvenidos a la Aventura Patria!</h1>
+        <p class="introduccion">
+          Hola amiguito, en esta página web vas a descubrir los secretos mejor
+          guardados de nuestros
+          <strong>Símbolos Patrios</strong>. Aprenderás su historia, qué
+          significan sus colores y elementos, ¡y podrás jugar a divertidos retos
+          interactivos! ¿Estás listo para empezar?
+        </p>
+
+        <div class="video-contenedor">
+          <iframe
+            src="./img/video.mp4"
+            title="Video de introducción"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+          <p class="pie-video">
+            📹 Mira este video introductorio sobre nuestra identidad nacional.
+          </p>
+        </div>
+      </section>
+
+      <section class="tarjetas-seccion">
+        <h2>¿Qué quieres aprender hoy?</h2>
+
+        <div class="grid-tarjetas">
+          <div class="tarjeta-inicio">
+            <div class="tarjeta-imagen">
+              <img src="./img/ve.png" alt="La Bandera" />
+            </div>
+            <h3>La Bandera Nacional</h3>
+            <p>
+              Descubre el significado del amarillo, azul y rojo, y la historia
+              de sus 8 estrellas brillantes.
+            </p>
+            <a href="#bandera-seccion" class="btn-ir">¡A Jugar! 🧩</a>
+          </div>
+
+          <div class="tarjeta-inicio">
+            <div class="tarjeta-imagen">
+              <img src="./img/escudo-venezuela.png" alt="El Escudo" />
+            </div>
+            <h3>El Escudo Nacional</h3>
+            <p>
+              ¿Sabías qué significan las espigas y el caballo blanco? ¡Entra
+              aquí y descúbrelo!
+            </p>
+            <a href="#escudo-seccion" class="btn-ir">¡A Jugar! 🛡️</a>
+          </div>
+
+          <div class="tarjeta-inicio">
+            <div class="tarjeta-imagen">
+              <img src="./img/Himno-Nacional-1024x576.jpg" alt="El Himno" />
+            </div>
+            <h3>El Himno Nacional</h3>
+            <p>
+              Entona con orgullo las notas del "Gloria al Bravo Pueblo" y pon a
+              prueba tu memoria musical.
+            </p>
+            <a href="#himno-seccion" class="btn-ir">¡A Jugar! 🎵</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================================================
+       3. SECCIÓN DE LA BANDERA (bandera.html)
+       ========================================================================== -->
+    <main id="bandera-seccion">
+      <section class="informacion-patria">
+        <h2>Símbolos Patrios: La Bandera Nacional de Venezuela</h2>
+        <p>
+          La bandera de la República Bolivariana de Venezuela es el símbolo
+          máximo de la identidad, soberanía e historia del país. Su diseño
+          actual consta de tres franjas horizontales del mismo tamaño y ocho
+          estrellas blancas dispuestas en arco.
+        </p>
+
+        <h3>📌 Fundación y Reseña Histórica</h3>
+        <ul>
+          <li>
+            <strong>Creador:</strong> Diseñada por el Generalísimo Francisco de
+            Miranda.
+          </li>
+          <li>
+            <strong>Primer izado:</strong> El 12 de marzo de 1806 en el buque
+            <em>Leander</em> (Haití) y el 3 de agosto de 1806 en La Vela de Coro
+            (Venezuela).
+          </li>
+          <li>
+            <strong>Adopción oficial:</strong> 14 de julio de 1811 por el
+            Congreso Constituyente.
+          </li>
+          <li>
+            <strong>Última modificación (2006):</strong> Se incorporó la
+            <strong>octava estrella</strong> en cumplimiento del decreto de
+            Simón Bolívar de 1817 para honrar a la provincia de Guayana, y se
+            adaptó el Escudo de Armas.
+          </li>
+        </ul>
+
+        <h3>🎨 Significado de los Colores</h3>
+        <ul>
+          <li>
+            <strong>Amarillo:</strong> Representa las riquezas del suelo
+            venezolano, el sol de la justicia, la soberanía y la agricultura.
+          </li>
+          <li>
+            <strong>Azul:</strong> Simboliza el cielo patrio y las aguas del Mar
+            Caribe y el Océano Atlántico que separan al país del continente
+            europeo.
+          </li>
+          <li>
+            <strong>Rojo:</strong> Evoca la sangre derramada por los héroes y
+            patriotas en las batallas por la independencia del país.
+          </li>
+        </ul>
+
+        <h3>⭐ Las Ocho Estrellas</h3>
+        <p>
+          Representan a las provincias originales que firmaron el Acta de
+          Independencia en 1811 (Caracas, Cumaná, Barinas, Margarita, Barcelona,
+          Mérida y Trujillo) más la provincia de Guayana, incorporada por su
+          vital apoyo a la gesta libertadora.
+        </p>
+
+        <h3>⚙️ Utilidad y Variantes de la Bandera</h3>
+        <ul>
+          <li>
+            <strong>Uso Civil:</strong> La bandera simple (sin escudo) es de uso
+            libre para los ciudadanos, comercios, colegios y fechas patrias.
+          </li>
+          <li>
+            <strong>Uso Institutional:</strong> La versión con el Escudo de
+            Armas en la franja amarilla está reservada exclusivamente para sedes
+            gubernamentales, embajadas y componentes de la Fuerza Armada
+            Nacional.
+          </li>
+        </ul>
+      </section>
+
+      <section class="contenedor-juego">
+        <h2>🧩 ¡Arma la Bandera Nacional!</h2>
+        <p class="instruccion">
+          Arrastra las franjas de colores hacia el marco gris en el orden
+          correcto (de arriba hacia abajo).
+        </p>
+
+        <div id="zona-destino" class="marco-bandera">
+          <div class="linea-guia" data-color="amarillo">
+            Suelte el Amarillo aquí
+          </div>
+          <div class="linea-guia" data-color="azul">Suelte el Azul aquí</div>
+          <div class="linea-guia" data-color="rojo">Suelte el Rojo aquí</div>
+        </div>
+
+        <div class="piezas-contenedor">
+          <div class="pieza azul" draggable="true" id="pieza-azul">
+            Azul (Con Estrellas)
+          </div>
+          <div class="pieza rojo" draggable="true" id="pieza-rojo">
+            Rojo (Valor)
+          </div>
+          <div class="pieza amarillo" draggable="true" id="pieza-amarillo">
+            Amarillo (Riquezas)
+          </div>
+        </div>
+
+        <button class="btn-verificar" onclick="verificarBandera()">
+          Verificar Rompecabezas
+        </button>
+
+        <div id="feedback-bandera" class="feedback"></div>
+      </section>
+    </main>
+
+    <!-- ==========================================================================
+       4. SECCIÓN DEL ESCUDO (escudo.html)
+       ========================================================================== -->
+    <main id="escudo-seccion">
+      <section class="informacion-patria">
+        <h2>📜 Origen y Evolución Histórica del Escudo Nacional</h2>
+        <p>
+          El Escudo de Armas de Venezuela no nació de la noche a la mañana; su
+          diseño actual es el resultado de una evolución política y civil que
+          comenzó con los primeros pasos de la independencia.
+        </p>
+
+        <h3>⏳ La Fundación (1810 - 1811)</h3>
+        <ul>
+          <li>
+            <strong>El primer antecedente (1810):</strong> El 19 de abril de
+            1810, la Junta Suprema de Caracas creó el primer sello oficial. No
+            era un escudo como el de hoy, sino un sello que mostraba un sol con
+            el número "19" en el centro, rodeado por la frase
+            <em>"Junta Suprema de Caracas"</em>.
+            <div class="contenedor-img-historia">
+              <img
+                src="./img/sello_1810.png"
+                alt="Sello 1810"
+                onerror="this.style.display = 'none'"
+              />
+            </div>
+          </li>
+          <li>
+            <strong>El Escudo de la Primera República (1811):</strong> Tras la
+            Declaración de la Independencia, el Congreso Constituyente aprobó el
+            primer Escudo de Armas oficial el
+            <strong>2 de septiembre de 1811</strong>. Este diseño era muy
+            diferente: mostraba un cóndor con las alas extendidas sosteniendo en
+            sus garras el texto del acta de independencia, un sol y un gorro
+            frigio (símbolo de libertad).
+            <div class="contenedor-img-historia">
+              <img
+                src="./img/escudo_1811.png"
+                alt="Escudo 1811"
+                onerror="this.style.display = 'none'"
+              />
+            </div>
+          </li>
+        </ul>
+
+        <h3>🏛️ La Evolución y Leyes Clave</h3>
+        <p>
+          A lo largo de los siglos XIX y XX, el escudo cambió a la par de la
+          historia política del país:
+        </p>
+        <ol>
+          <li>
+            <strong>Época de la Gran Colombia (1819 - 1830):</strong> Al
+            integrarse con Nueva Granada y Ecuador, Venezuela adoptó
+            provisionalmente el escudo de la Nueva Granada y, posteriormente, el
+            de las Cornucopias (dos cuernos de la abundancia llenos de frutas).
+          </li>
+          <li>
+            <strong>El Escudo de la República (1836):</strong> Tras separarse de
+            la Gran Colombia, el Congreso de 1836 encargó un nuevo diseño al
+            diplomático Sir Robert Ker Porter y al pintor Carmelo Fernández.
+            <strong>Este es el nacimiento del diseño actual</strong>: se
+            establecieron por primera vez los tres cuarteles (rojo con espigas,
+            amarillo con armas y azul con el caballo blanco), inspirados en el
+            tricolor de Miranda.
+            <div class="contenedor-img-historia">
+              <img
+                src="./img/escudo_1836.png"
+                alt="Escudo 1836"
+                onerror="this.style.display = 'none'"
+              />
+            </div>
+          </li>
+          <li>
+            <strong>La Reforma de la Federación (1863):</strong> El mariscal
+            Juan Crisóstomo Falcón ordenó sustituir las frases del escudo por
+            las fechas de la Independencia (19 de abril de 1810) y de la
+            Federación (20 de febrero de 1859).
+          </li>
+          <li>
+            <strong>Unificación de Criterios (1954):</strong> El presidente
+            Marcos Pérez Jiménez promulgó la Ley de Símbolos Patrios que
+            estandarizó el escudo, fijando el caballo blanco corriendo hacia la
+            derecha y mirando hacia la izquierda (en actitud de alerta).
+          </li>
+        </ol>
+
+        <h3>🚀 La Reforma Actual (2006)</h3>
+        <p>
+          El <strong>9 de marzo de 2006</strong>, la Asamblea Nacional aprobó la
+          modificación más reciente de la Ley de Símbolos Patrios, introduciendo
+          los cambios que vemos hoy en las páginas web oficiales:
+        </p>
+        <ul>
+          <li>
+            <strong>El Caballo Indómito:</strong> El caballo ahora galopa
+            libremente hacia la izquierda de la pantalla y mira hacia el frente,
+            simbolizando el rumbo del país hacia el futuro y la libertad.
+          </li>
+          <li>
+            <strong>Las Espigas:</strong> Se aumentó el número de espigas en el
+            cuartel rojo a <strong>24 espigas</strong>, representando a los 23
+            estados actuales de Venezuela más el Distrito Capital.
+          </li>
+          <li>
+            <strong>Nuevas Armas:</strong> Se incluyeron un machete, un arco y
+            una flecha en el cuartel amarillo, como tributo a las luchas de los
+            pueblos indígenas y los campesinos en la historia nacional.
+          </li>
+          <li>
+            <strong>Nombre Oficial:</strong> Se cambió la inscripción de la
+            cinta central a <em>"República Bolivariana de Venezuela"</em>.
+          </li>
+        </ul>
+
+        <h3>⚙️ Utilidad y Uso Legal del Escudo Nacional</h3>
+        <p>
+          A diferencia de la Bandera o el Himno, que son de uso masivo por la
+          ciudadanía, el Escudo de Armas de Venezuela tiene una utilidad
+          estrictamente institucional y legal regulada por el Estado:
+        </p>
+        <ul>
+          <li>
+            <strong>Autenticación Documental:</strong> Su uso principal es
+            validar y dar fuerza legal a los documentos públicos e
+            institucionales del país. Aparece de forma obligatoria en actas de
+            nacimiento, títulos universitarios, pasaportes, cédulas de
+            identidad, gacetas oficiales y papel sellado.
+          </li>
+          <li>
+            <strong>Identificación del Poder Público:</strong> Sirve para
+            identificar visualmente a las sedes de los Poderes Públicos
+            Nacionales. Lo verás en las fachadas e interiores del Palacio
+            Federal Legislativo, el Tribunal Supremo de Justicia, ministerios y
+            oficinas gubernamentales.
+          </li>
+          <li>
+            <strong>Representación Diplomática:</strong> Es el sello que
+            representa la soberanía del país en el extranjero, impreso de manera
+            obligatoria en las fachadas de las embajadas, consulados y
+            residencias diplomáticas de Venezuela en todo el mundo.
+          </li>
+          <li>
+            <strong>Uso Militar y Policial:</strong> Se utiliza en los
+            estandartes de los componentes de la Fuerza Armada Nacional
+            Bolivariana (FANB), cuerpos policiales, condecoraciones
+            presidenciales y uniformes oficiales como símbolo de lealtad y
+            autoridad del Estado.
+          </li>
+          <li>
+            <strong>Acuñación de Moneda:</strong> Su silueta o diseño completo
+            se utiliza históricamente en el reverso de las monedas y en los
+            sistemas de seguridad de los billetes de curso legal (Bolívares)
+            emitidos por el Banco Central de Venezuela.
+          </li>
+        </ul>
+      </section>
+
+      <section class="contenedor-juego">
+        <h2>🛡️ El Escudo y sus Secretos</h2>
+        <p class="instruccion">
+          Mira la descripción de los cuarteles y escribe la respuesta correcta
+          para completar el reto:
+        </p>
+
+        <div class="imagen-guia-juego">
+          <img src="./img/escudo_actual.png" alt="Escudo de Venezuela" />
+        </div>
+
+        <div class="reto-escudo">
+          <div class="pregunta-escudo">
+            <strong>1. Cuartel Amarillo (Derecha):</strong> Tiene espadas y
+            banderas enlazadas que significan el triunfo en la guerra. ¿Qué
+            animal blanco y libre galopa en el cuartel de abajo?
+            <br />
+            <input
+              type="text"
+              id="resp-caballo"
+              placeholder="Escribe el animal aquí..."
+            />
+          </div>
+
+          <div class="pregunta-escudo">
+            <strong>2. Cuartel Rojo (Izquierda):</strong> Tiene un manojo de
+            espigas que representa la unión de nuestras tierras. ¿Cuántas
+            espigas tiene en total? (Escribe el número)
+            <br />
+            <input type="number" id="resp-espigas" placeholder="Ej. 10" />
+          </div>
+        </div>
+
+        <button class="btn-verificar" onclick="verificarEscudo()">
+          Comprobar Respuestas
+        </button>
+
+        <div id="feedback-escudo" class="feedback"></div>
+      </section>
+    </main>
+
+    <!-- ==========================================================================
+       5. SECCIÓN DEL HIMNO Y CRUCIGRAMA (himno.html)
+       ========================================================================== -->
+    <main id="himno-seccion">
+      <section class="info-himno-contenedor">
+        <h2>
+          🎼 Historia, Fundación y Significado del Himno Nacional de Venezuela
+        </h2>
+        <p>
+          El <strong>"Gloria al Bravo Pueblo"</strong> es el canto patriótico
+          que representa la identidad y el espíritu rebelde y libertario de los
+          venezolanos.
+        </p>
+
+        <hr />
+
+        <h3>⏳ Fundación y Declaración Oficial</h3>
+        <ul>
+          <li>
+            <strong>Nacimiento (1810):</strong> La canción surgió como un canto
+            emocional de los patriotas inmediatamente después de los sucesos
+            revolucionarios del <strong>19 de abril de 1810</strong>. Se cantaba
+            en las calles y en las reuniones de la Sociedad Patriótica para
+            encender los ánimos contra el imperio español.
+          </li>
+          <li>
+            <strong>Declaración Oficial (1881):</strong> Fue decretado
+            oficialmente como Himno Nacional de Venezuela el
+            <strong>25 de mayo de 1881</strong> por el presidente Antonio Guzmán
+            Blanco.
+          </li>
+        </ul>
+
+        <hr />
+
+        <h3>📜 Reseña Histórica y Autores</h3>
+        <p>
+          El origen del himno estuvo rodeado de debates históricos durante años,
+          pero la tradición y las investigaciones legales le atribuyen la
+          autoría a los siguientes próceres:
+        </p>
+        <ul>
+          <li>
+            <strong>Letra:</strong> Atribuida al médico y periodista
+            <strong>Vicente Salias</strong>, quien improvisó las primeras
+            estrofas durante una sesión de la Sociedad Patriótica.
+          </li>
+          <li>
+            <strong>Música:</strong> Compuesta por el músico
+            <strong>Juan José Landaeta</strong>, quien le dio el ritmo de
+            "canción patriótica" inspirado en las marchas de la época.
+          </li>
+          <li>
+            <strong>Evolución:</strong> Tras el decreto de 1881, la composición
+            musical original ha tenido tres modificaciones oficiales para
+            adaptarla a las bandas militares y coros modernos: la de Eduardo
+            Calcaño (1881), Salvador Llamozas (1911) y la de
+            <strong>Juan Bautista Plaza (1947)</strong>, que es la versión
+            oficial y técnica que se ejecuta hoy en día.
+          </li>
+        </ul>
+
+        <hr />
+
+        <h3>💡 Significado de la Letra</h3>
+        <p>
+          El himno es una crónica de la lucha de clases y la unión americana
+          contra la opresión. Su significado se desglosa así:
+        </p>
+        <ul>
+          <li>
+            <strong>El Coro (<em>"Gloria al bravo pueblo..."</em>):</strong> Es
+            un aplauso a la valentía del pueblo de Caracas que se atrevió a
+            romper las cadenas del imperio español ("el yugo lanzó") manteniendo
+            siempre el orden civil ("la Ley respetando") y los valores morales
+            ("la virtud y honor").
+          </li>
+          <li>
+            <strong>Primera Estrofa (<em>"¡Abajo cadenas!..."</em>):</strong>
+            Narra el momento de la insurrección. Muestra cómo la necesidad de
+            libertad unió a los mantuanos ricos ("gritaba el señor") y a los
+            sectores más desfavorecidos ("el pobre en su choza"). El "vil
+            egoísmo" representa a las autoridades españolas que solo buscaban su
+            propio beneficio.
+          </li>
+          <li>
+            <strong>Segunda Estrofa (<em>"Gritemos con brío..."</em>):</strong>
+            Es un llamado a la constancia. Si los tiranos intentan volver a
+            oprimir al pueblo, los patriotas deben animarse mutuamente a luchar,
+            recordando que en la unión de las fuerzas está la fuerza del éxito.
+          </li>
+          <li>
+            <strong>Tercera Estrofa (<em>"Unida con lazos..."</em>):</strong> Es
+            un mensaje de integración latinoamericana. Hace referencia a que
+            toda América ("el bloque") está unida por el mismo ideal. Además,
+            lanza una advertencia poética: si el despotismo (la tiranía) intenta
+            atacar, la América unida sabrá defenderse.
+          </li>
+        </ul>
+
+        <hr />
+
+        <h3>⚙️ Utilidad del Himno Nacional</h3>
+        <p>
+          En el ecosistema social y legal de Venezuela, el himno cumple con
+          funciones estrictas:
+        </p>
+        <ul>
+          <li>
+            <strong>Protocolo de Estado:</strong> Se interpreta de manera
+            obligatoria al inicio y cierre de los actos oficiales del Gobierno,
+            transmisiones presidenciales y eventos de las Fuerzas Armadas.
+          </li>
+          <li>
+            <strong>Identidad Internacional:</strong> Suena en eventos
+            diplomáticos en el extranjero y en competencias deportivas
+            internacionales cuando un atleta venezolano sube al podio (Juegos
+            Olímpicos, mundiales, etc.).
+          </li>
+          <li>
+            <strong>Uso Educativo y Medios:</strong> Por ley, todas las escuelas
+            y liceos deben interpretarlo antes de iniciar la jornada escolar.
+            Asimismo, las estaciones de radio y televisión del país tienen la
+            obligación legal de transmitirlo diariamente a las
+            <strong>6:00 a. m. y a las 12:00 de la medianoche</strong>.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Bloque de Letra y Reproducción -->
+      <div class="himno-seccion">
+        <h2>🎵 El Himno Nacional: Gloria al Bravo Pueblo</h2>
+
+        <div class="himno-contenedor">
+          <div class="himno-letra">
+            <h3>Letra Oficial</h3>
+            <p class="coro">
+              <strong>CORO</strong><br />
+              Gloria al bravo pueblo<br />
+              que el yugo lanzó<br />
+              la Ley respetando<br />
+              la virtud y honor.
+            </p>
+
+            <p class="estrofa">
+              <strong>I ESTROFA</strong><br />
+              ¡Abajo cadenas!<br />
+              gritaba el señor;<br />
+              y el pobre en su choza<br />
+              Libertad pidió:<br />
+              a este santo nombre<br />
+              tembló de pavor<br />
+              el vil egoísmo<br />
+              que otra vez triunfó.
+            </p>
+          </div>
+
+          <div class="himno-audio">
+            <h3>Escuchar Himno</h3>
+            <a
+              href="https://www.youtube.com/watch?v=usyDbeY-2_w"
+              target="_blank"
+              class="btn-enlace-video"
+            >
+              📺 Escuchar en YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloque del Crucigrama -->
+      <section class="contenedor-juego">
+        <h2>✏️ Mini Crucigrama: Gloria al Bravo Pueblo</h2>
+        <p class="instruccion">
+          Completa las palabras que cruzan horizontal y verticalmente basándote
+          en la letra de nuestro Himno.
+        </p>
+
+        <div class="pistas">
+          <p>
+            <strong>1 Vertical (↓):</strong> Gloria al bravo ______ (La gente de
+            nuestra patria).
+          </p>
+          <p>
+            <strong>2 Horizontal (→):</strong> Que el ______ lanzó (El
+            instrumento de opresión que rompió el pueblo).
+          </p>
+        </div>
+
+        <div class="crucigrama">
+          <!-- Fila 1 -->
+          <div class="celda vacia"></div>
+          <div class="celda">
+            <input type="text" id="c1" maxlength="1" placeholder="1↓" />
+          </div>
+          <div class="celda vacia"></div>
+          <div class="celda vacia"></div>
+
+          <!-- Fila 2 (Cruce "YUGO") -->
+          <div class="celda">
+            <input type="text" id="h1" maxlength="1" placeholder="2→" />
+          </div>
+          <div class="celda"><input type="text" id="c2" maxlength="1" /></div>
+          <div class="celda"><input type="text" id="h2" maxlength="1" /></div>
+          <div class="celda"><input type="text" id="h3" maxlength="1" /></div>
+
+          <!-- Fila 3 -->
+          <div class="celda vacia"></div>
+          <div class="celda"><input type="text" id="c3" maxlength="1" /></div>
+          <div class="celda vacia"></div>
+          <div class="celda vacia"></div>
+
+          <!-- Fila 4 -->
+          <div class="celda vacia"></div>
+          <div class="celda"><input type="text" id="c4" maxlength="1" /></div>
+          <div class="celda vacia"></div>
+          <div class="celda vacia"></div>
+
+          <!-- Fila 5 -->
+          <div class="celda vacia"></div>
+          <div class="celda"><input type="text" id="c5" maxlength="1" /></div>
+          <div class="celda vacia"></div>
+          <div class="celda vacia"></div>
+        </div>
+
+        <button class="btn-verificar" onclick="verificarCrucigrama()">
+          Validar Crucigrama
+        </button>
+
+        <div id="feedback-himno" class="feedback"></div>
+      </section>
+    </main>
+
+    <!-- ==========================================================================
+       6. PIE DE PÁGINA (Convertido a HTML puro estático)
+       ========================================================================== -->
+    <footer class="main-footer">
+      <div class="footer-contenido">
+        <div class="footer-info">
+          <h3>Símbolos Patrios Interactivos</h3>
+          <p>Proyecto Didáctico para el cierre de Bachillerato.</p>
+          <p class="año-escolar">Año Escolar 2025 - 2026</p>
+        </div>
+
+        <div class="footer-creditos">
+          <h4>Desarrollado por:</h4>
+          <p>Estudiantes de 5to Año</p>
+          <p class="mencion">Mención: Ciencias / Informática</p>
+        </div>
+      </div>
+
+      <div class="footer-barra-derechos">
+        <p>&copy; 2026 Unidad Educativa Colegio Del Santisimo.</p>
+      </div>
+    </footer>
+
+    <!-- Vinculación del archivo lógico de Javascript externo -->
+    <script src="main.js"></script>
+  </body>
+</html>
