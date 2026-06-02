@@ -364,14 +364,23 @@ h2 {
   background: #f7f9fa;
   padding: 15px;
   border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .himno-letra .coro {
-  border-left: 5px solid #fcd116;
+  border-left: 5px solid #fcd116; /* Amarillo */
 }
 
 .himno-letra .estrofa {
-  border-left: 5px solid #ce1126;
+  border-left: 5px solid #1e88e5; /* Azul */
+}
+
+.himno-letra .estrofa-dos {
+  border-left: 5px solid #ce1126; /* Rojo */
+}
+
+.himno-letra .estrofa-tres {
+  border-left: 5px solid #28a745; /* Verde */
 }
 
 .btn-enlace-video {
@@ -420,6 +429,7 @@ h2 {
   font-size: 0.95rem;
   border-bottom: 1px dashed #ddd;
   transition: background-color 0.2s ease;
+  touch-action: none; /* Crucial para prevenir scrolls accidentales en móviles */
 }
 
 .linea-guia:last-child {
@@ -449,6 +459,9 @@ h2 {
   text-align: center;
   user-select: none;
   transition: transform 0.15s ease;
+  touch-action: none; /* Deshabilita scroll de pantalla mientras se arrastra en móvil */
+  position: relative;
+  z-index: 10;
 }
 
 .pieza:active {
@@ -487,6 +500,7 @@ h2 {
   margin: 5px 0;
 }
 
+/* Ajustado a 6 filas verticales por 4 columnas */
 .crucigrama {
   display: grid;
   grid-template-columns: repeat(4, 55px);
@@ -600,7 +614,6 @@ h2 {
    8. RESPONSIVE DESIGN (MEDIA QUERIES INTEGRADOS)
    ========================================================================== */
 
-/* Tablets y Pantallas Medianas (Hasta 768px) */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -639,7 +652,6 @@ h2 {
   }
 }
 
-/* Teléfonos y Dispositivos Móviles Pequeños (Hasta 600px) */
 @media (max-width: 600px) {
   .contenedor-juego,
   .informacion-patria,
@@ -650,12 +662,10 @@ h2 {
     margin: 20px auto;
   }
 
-  /* Distribución vertical para audio y letra */
   .himno-contenedor {
     flex-direction: column;
   }
 
-  /* Ajuste responsivo estricto para las celdas del Crucigrama */
   .crucigrama {
     grid-template-columns: repeat(4, 45px);
     grid-gap: 6px;
@@ -670,7 +680,6 @@ h2 {
     font-size: 1.1rem;
   }
 
-  /* Ajuste de piezas arrastrables */
   .pieza {
     width: 110px;
     height: 50px;
@@ -681,7 +690,6 @@ h2 {
     height: 160px;
   }
 
-  /* Footer en teléfonos */
   .footer-contenido {
     flex-direction: column;
     text-align: center;
